@@ -1,0 +1,53 @@
+{
+    "students":  [{
+        "SN": "1",
+        "Name":"Nilesh",
+        "Class": "12th",
+        "Rollno":"07",
+        "Section": "B"
+    },
+    {
+        "SN": "2",
+        "Name":"Vinit",
+        "Class": "11th",
+        "Rollno":"10",
+        "Section": "A"
+    },
+    {
+        "SN": "3",
+        "Name":"Tushar",
+        "Class": "10th",
+        "Rollno":"16",
+        "Section": "C"
+    },
+    {
+        "SN": "4",
+        "Name":"Koshal",
+        "Class": "8th",
+        "Rollno":"27",
+        "Section": "D"
+    },
+    {
+        "SN": "5",
+        "Name":"Nitin",
+        "Class": "9th",
+        "Rollno":"21",
+        "Section": "E"
+    },
+    {
+        "SN": "6",
+        "Name":"Manoj",
+        "Class": "5th",
+        "Rollno":"25",
+        "Section": "F"
+    },
+    {
+        "SN": "7",
+        "Name":"Deepak",
+        "Class": "1st",
+        "Rollno":"09",
+        "Section": "G"
+    }
+
+    
+]}

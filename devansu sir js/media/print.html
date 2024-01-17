@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- <p id="item"></p>
+<p id="price"></p>
+<p id="quantity" ></p>
+<p id="bill"></p>
+<p id="billdiscount"></p>
+<p id="totalbill"></p>
+<p id="gst"></p>
+<p id="finalbill"></p>
+<p id="output"></p> -->
+<button onclick="myprint()">Bill Print</button>
+<div id="my"></div>
+
+
+
+<script>
+let item = prompt("Enter item :- ")
+let price = prompt("Enter Price :- ")
+let quantity = prompt("Enter item Quantity :- ")
+
+let discount = 10
+let gst = 20
+let bill = price*quantity
+let bill_Discount = bill*(discount/100)
+let total_Bill = bill-bill_Discount
+let bill_Gst = total_Bill*(gst/100)
+let final_Bill = total_Bill+bill_Gst
+
+// document.getElementById("item").innerHTML= "Item:- "+item 
+// document.getElementById("price").innerHTML="Price :-"+price
+// document.getElementById("quantity").innerHTML="Quantity :- "+quantity
+// document.getElementById('bill').innerHTML="Bill :- "+bill
+// document.getElementById('billdiscount').innerHTML="Bill Discount :- "+bill
+// document.getElementById('totalbill').innerHTML="Total Bill :- "+total_Bill
+// document.getElementById('gst').innerHTML= "Gst :-"+bill_Gst
+// document.getElementById('finalbill').innerHTML= "Final Bill :-"+final_Bill 
+// document.getElementById('output').innerHTML= "You Have to pay "+final_Bill+"\u20B9"+" for "+quantity
+
+document.getElementById("my").innerHTML="Item:- "+item+"</br>"+"Price:-"+price+"</br>"+"Quantity :- "+quantity+"</br>"+"Bill :- "+bill+"</br>"+"Bill Discount :- "+bill+"</br>"+"Total Bill :- "+total_Bill+"</br>"+"Gst :-"+bill_Gst+"</br>"+"Final Bill :-"+final_Bill+"</br>"+"You Have to pay "+final_Bill+"\u20B9"+" for "+quantity
+
+console.log("Item:- "+item)
+console.log("Price:- "+ price)
+console.log("Quantity:- "+ quantity)
+console.log("Bill :- "+bill)
+console.log("Bill Discount :- "+bill_Discount)
+console.log("Total Bill:- "+total_Bill)
+console.log("Gst:- "+bill_Gst)
+console.log("Final Bill:- "+final_Bill)
+console.log("You have to pay "+final_Bill+"\u20B9"+" for "+quantity+"-"+item)
+
+function myprint(){
+    window.print()
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+
+        .box1 {
+            margin: 10px;
+            border: 1px solid black;
+            width: 200px;
+            
+            
+        }
+        .box1 input{
+            border: none;
+            outline: none;
+        }
+        .box1 img{
+            width: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="/media/new.html" onsubmit=" return myform()">
+    <label for="">First Name</label>
+    <input type="text" name="fname" id="fname"><span id="fnameerror"></span>
+    <br><br>
+    <label for="">Password</label>
+    <input type="password" name="pass" id="pass">
+    <br><br>
+    <label for="">Confirm Password</label>
+    <input type="password" name="cpass" id="cpass"><span id="passerror"></span>
+    <br><br>
+    <label for="">Mobile Number</label>
+    <input type="text" name="mnumber" id="mnumber"><span id="numerror"></span>
+    <br><br>
+    <input type="submit" value="submit">
+    </form>
+
+    
+        <div class="box1">
+        <input type="password" name="mypass" id="pass1">
+        <img src="/media/show icon.png" alt="" id="img1" onclick="mypass1()">
+        </div>
+    
+
+    <script>
+        function myform(){
+            let x = document.getElementById("fname").value
+            //agar user form ko blank chodta hai to 
+            if(x==""){
+                document.getElementById("fnameerror").innerText=" Please enter first name"
+                return false
+            }
+
+            //agar word kam dalta hai to
+            if(x.length<5){
+                document.getElementById("fnameerror").innerText=" First name should be grater than 5"
+                return false
+            }
+
+            //agar starting me ya end me blank space chodta hai to 
+            if(x.trim()==""){
+                document.getElementById("fnameerror").innerText=" Please don't use space"
+                return false
+            }
+            
+            let password = document.getElementById("pass").value
+            let confirmPassword = document.getElementById("cpass").value
+
+            //password match na hone per error dena
+            if(password!==confirmPassword){
+                document.getElementById("passerror").innerText=" Password is not match"
+                return false
+            }
+
+            //password blank dene per
+            if(password==""){
+                document.getElementById("passerror").innerText=" Enter password"
+                return false
+            }
+
+            //password 5 se bada hona chahiye
+            if(password.length<5){
+                document.getElementById("passerror").innerText=" Password should be grater than 5"
+                return false
+            }
+
+            let phoneNum = document.getElementById("mnumber").value
+            if(phoneNum==10){
+                document.getElementById("numerror").innerText=" Enter 10 digit number"
+                return false
+            }
+         }
+
+
+         function mypass1(){
+            let password1 = document.getElementById("pass1")
+            if(password1.type=="password"){
+                password1.type = "text"
+                document.getElementById("img1").attributes[0].value="/media/hide icon2.png"
+                
+            }
+            else{
+                password1.type = "password"
+                document.getElementById("img1").attributes[0].value="/media/show icon.png"
+            }
+         }
+    </script>
+</body>
+</html>

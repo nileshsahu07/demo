@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" id="pimage">
+    <img src="" alt="" id="pimage1">
+    <img src="" alt="" id="pimage2">
+    <img src="" alt="" id="pimage3">
+    <img src="" alt="" id="pimage4">
+    <button onclick="myfn()">button</button>
+
+
+    <script>
+        async function myfn(){
+            let result = await fetch("https://dummyjson.com/products")
+            let data = await result.json()
+            let pimage = data.products[1].images[0]
+            let pimage1 = data.products[1].images[1]
+            let pimage2 = data.products[1].images[2]
+            let pimage3 = data.products[1].images[3]
+            let pimage4 = data.products[1].images[4]
+
+            document.getElementById("pimage").attributes[0].value = pimage
+            document.getElementById("pimage1").attributes[0].value = pimage1
+            document.getElementById("pimage2").attributes[0].value = pimage2
+            document.getElementById("pimage3").attributes[0].value = pimage3
+            document.getElementById("pimage4").attributes[0].value = pimage4
+
+            console.log(data)
+        }
+    </script>
+</body>
+</html>

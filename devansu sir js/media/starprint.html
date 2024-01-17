@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: blue;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        //left triangle
+       /* let starPrint = 5
+        // let starPrint = prompt("Enter value:- ")
+        for(i=1; i<=starPrint; i++){
+            for(j=1; j<=i; j++){
+                document.write("*")
+            }
+            document.write("</br>")
+        }*/
+        
+        //ulta triangle
+        /*let starPrint = 5
+        for(i=starPrint; i>=1; i-- ){
+            for(j=i; j>=1; j--){
+                document.write("*")
+            }
+            document.write("</br>")
+        }*/
+
+
+        //right triangle
+        /*let star = 5
+
+        for (let i = 1; i<=star; i++){ 
+            for(let j =0; j<star-i; j++){
+                document.write("&nbsp;&nbsp")
+        }
+        for (let k= 1 ; k<=i; k++){
+            document.write("*")
+        }
+        document.write("</br>")
+    }*/
+
+    //middle triangle
+    let star = 5
+
+        for (let i = 1; i<=star; i++){ 
+            for(let j =0; j<star-i; j++){
+                document.write("&nbsp;&nbsp")
+        }
+        for (let k= 1 ; k<=i; k++){
+            document.write("*")
+        }
+        for(l =2; l<=i; l++){
+            document.write("*")
+        }
+        document.write("</br>")
+    }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="date"></p> -->
+
+    <h1 id="date2"></h1>
+    
+
+
+
+    <script>
+        /*let myDate = new Date()
+        console.log(myDate)*/
+        /*let myDate = new Date()
+        console.log(myDate)
+
+        document.getElementById("date").innerHTML = myDate*/
+
+        
+        //task => running clock
+        // let myDate = new Date()
+
+        // let todayDate = myDate.getDate()
+        //  let month = myDate.getMonth()+1
+        //  let year =  myDate.getFullYear()
+        // let hour =  myDate.getHours()
+        // let min = myDate.getMinutes()
+        //  let sec =  myDate.getSeconds()
+
+        // console.log(`${todayDate}/${month}/${year} ${hour}:${min}:${sec}`)
+        
+        // let clock = `${todayDate}/${month}/${year} ${hour}:${min}:${sec}`
+
+        // document.getElementById("date2").innerHTML=myDate
+        // document.getElementById("date2").innerHTML=clock
+
+        function mytime(){
+            let myDate = new Date()
+
+        let todayDate = myDate.getDate()
+         let month = myDate.getMonth()+1
+         let year =  myDate.getFullYear()
+        let hour =  myDate.getHours()
+        let min = myDate.getMinutes()
+         let sec =  myDate.getSeconds()
+
+         let clock = `${todayDate}/${month}/${year} ${hour}:${min}:${sec}`
+
+         document.getElementById("date2").innerHTML=clock
+        }
+
+         setInterval(mytime,1000)
+        
+
+    </script>
+</body>
+</html>
